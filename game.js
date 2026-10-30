@@ -47,7 +47,7 @@ const paddle = {
   y: HEIGHT - 30,
   width: 90,
   height: 12,
-  speed: 6
+  speed: 9
 };
 
 
@@ -118,15 +118,16 @@ function moveBall() {
 
 
 // ------------------------------------------------------------
-// DRAW: paints everything on the canvas. Black background,
-// white shapes.
+// DRAW: paints the game on the canvas.
 // ------------------------------------------------------------
 function draw() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "#7de3d1";
   ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+
+  ctx.fillStyle = "#7de3d1";
   ctx.fillRect(ball.x, ball.y, ball.width, ball.height);
 
   drawBricks();  // bricks.js
